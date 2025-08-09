@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李晓涵 - 个人主页</title>
+  <style>
+    /* 背景渐变动画 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe, #dfe6e9);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 页面淡入 */
+    header, main, footer {
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
+    }
+    header { animation-delay: 0.1s; }
+    main { animation-delay: 0.3s; }
+    footer { animation-delay: 0.5s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 头部 */
+    header {
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* 主内容 */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 30px;
+      border: 4px solid #6c5ce7;
+      background-color: #eee;
+    }
+    .profile-info {
+      flex: 1;
+    }
+
+    h2 {
+      color: #6c5ce7;
+      border-bottom: 2px solid #6c5ce7;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+
+    /* 页脚 */
+    footer {
+      background-color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    footer a {
+      color: #6c5ce7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>李晓涵</h1>
+    <p>计算机科学 · 高性能计算</p>
+  </header>
+
+  <main>
+    <section class="profile">
+      <img src="my-photo.jpg" alt="个人照片">
+      <div class="profile-info">
+        <p>你好！我是李晓涵，专注于高性能计算和数据处理系统的研究与开发，热爱探索高效、可扩展的计算框架。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>教育经历</h2>
+      <ul>
+        <li>2018 - 2021 清华大学 · 计算机系 · 高性能计算所 · 硕士</li>
+        <li>2014 - 2018 清华大学 · 计算机系 · 本科</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Xiaohan Li · <a href="mailto:me@xiaohan.li">me@xiaohan.li</a>
+  </footer>
+</body>
+</html>
